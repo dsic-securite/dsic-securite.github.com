@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Sensibilisation aux failles de sécurité des applications Web</title>
+
+		<meta name="description" content="Sensibilisation aux failles de sécurité des applications Web">
+		<meta name="author" content="Sébastien Guerlet">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h2>Sécurité <br/>des applications Web</h1>
+						<h1>--<h1/>
+					<h4>présentation des principales vulnérabilités</h3>
+				</section>
+				<section>
+					<h2>Les vulnérabilités</h1>
+					<h4>sont issues de faiblesses d'implémentation<br/>à différents niveaux</h4>
+					<ul>
+						<li class="fragment">choix d'architecture (infrastructure ou logicielle)<br/>
+							<small>- non implémentation d'un DMZ et donc exposition de serveurs sensibles</small></li>
+						<li class="fragment">configuration des serveurs (OS, applicatif)<br/>
+							<small>- système non patché, installation par défaut avec des droits trop permissifs</small></li>
+						<li class="fragment">
+							développement logiciel<br/>
+							<small>- ce qui nous intéresse, détail à suivre...</small></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Les conséquences</h2>
+					<h4>de l'exploitation des vulnérabilités</h4>
+					<p>
+						L'exploitation d'une faiblesse de développement, de configuration, d'infrastructure, peut mener à :
+					</p>
+					<p>
+					<ul>
+						<li class="fragment">Une fuite de données<br/>
+							<small>- notamment personnelles comme les mots de passe, qui font régulièrement les choux gras de la presse spécialisée</small></li>
+						<li class="fragment">Une atteinte à l'image<br/>
+							<small>- le défaçage (defacing), la reprise sur les réseaux sociaux de failles de sécurité, avérées ou non</small></li>
+						<li class="fragment">Une interruption de service<br/>
+							<small>- attaque ciblée par déni de service, blocage de comptes utilisateurs suite à attaque par <i>brute force</i> </small></li>
+					</ul>
+					</p>
+
+				
+				</section>
+				<section>
+					<section>
+					<h2>Référencement des vulnérabilités</h2>
+					<h4><em>Know you enemy</em></h4>
+					<p>
+						Le choix d'un référentiel permet de partager une vision commune sur les risques et les moyens de protection associés.
+					</p>
+					<p>
+						Ce choix s'est porté naturellement sur l'<em>OWASP</em>
+					</p></section>
+					<section>
+						<h2>OWASP</h2>
+						<ul>
+							<li><strong>O</strong>pen <strong>W</strong>eb <strong>A</strong>pplication <strong>S</strong>ecurity <strong>P</strong>roject</li>
+							<li>Un organisme indépendant, acceptant toute contribution, mais qui n'est lié à aucun éditeur de solution</li>
+							<li>produit et met à disposition toute sorte de ressources
+								<small><ul>
+									<li>une base documentaire riche et régulièrement mise à jour</li>
+									<li>des fiches synthétiques sur les principales failles de sécurité (<a href="http://owasptop10.googlecode.com/files/OWASP%20Top%2010%20-%202010%20French.pdf">top 10</a>)</li>
+									<li>du code d'exemple, des framework (ex: <a href="https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API">ESAPI</a>) pour se prémunir des attaques</li>
+									<li>des outils d'intrusion pour tester le degré de vulnérabilité de son système (ex: <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">ZAP Proxy</a>)</li>
+									<li>...</li>
+								</ul></small>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h2>Top 10 des vulnérabilités</h2>
+					<img src="assets/top10.png"/>
+					
+				</section>
+				<section>
+					<h2>détails des vulnérabilités...</h2>
+					
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+	</body>
+</html>
