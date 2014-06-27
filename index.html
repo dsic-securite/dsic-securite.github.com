@@ -66,6 +66,16 @@
 		
 	</section>
 	<section>
+		
+		<h3>Quelques malheureux exemples récents</h3>
+		<ul>
+			<li>Domino's Pizza (650 000 comptes client)</li>
+			<li>eBay</li>
+			<li>Adobe (152 millions de comptes)</li>
+			<li>Heartbleed</li>
+		</ul>
+	</section>
+	<section>
 		<h2>Les conséquences</h2>
 		<h4>de l'exploitation des vulnérabilités</h4>
 		<p>
@@ -119,15 +129,26 @@
 	<section>
 		
 		<h3>All input is evil</h3>
-		S'il ne fallait retenir qu'une règle, c'est celle de ne jamais faire confiance aux sources externes, a commencer par les entrées utilisateur.
-		La bonne prataique consiste soit à 
+		<p>
+		S'il ne fallait retenir qu'une règle, c'est celle de ne jamais faire confiance aux sources externes, à commencer par les entrées utilisateur.<br/>
+		La bonne pratique consiste soit à :
+		</p>
 		<ul>
 			<li><b>filtrer</b> pour n'accepter que l'attendu (de préférence en liste blanche)</li>
 			<li><b>encoder</b> pour éviter toute injection (SQL injection, XSS, ...)</li>
 		</ul>
+		<p>Ne pas réinventer la roue, des framework de filtrage/encodage existent (<a href="https://code.google.com/p/owasp-esapi-php/wiki/Welcome?tm=6">ESAPI</a> par ex.)
 	</section>
 	<section>
-		
+		<h3>Recommandations pour les applications Web</h3>
+		<p>En plus du référentiel OWASP, des bonnes pratiques existent pour gérer la ssécurité des applications Web</p>
+		<ul>
+			<li>Utiliser des framework dédiés à la sécurité (il est trop dangereux et coûteux de chercher à réinventer la roue)</li>
+			<li>Transférer et Stocker les données sensibles de manière sécurisée (securing data at rest / in transit)</li>
+			<li>Tracer (et si possible analyser...)</li>
+			<li>et bien d'autres...</li>
+		</ul>
+		<a href="https://wiki.collaboratif-courrier.fr/confluence/x/hQGAB">Page wiki : recommandation pour la sécurité des applications Web</a>
 	</section>
     </div>
 <!--
