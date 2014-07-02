@@ -20,6 +20,10 @@
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
+		<style type="text/css">
+			p { text-align: left; }
+		</style>
+
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
 			if( window.location.search.match( /print-pdf/gi ) ) {
@@ -56,7 +60,7 @@
 				<small>- système non patché, installation par défaut avec des droits trop permissifs</small></li>
 			<li class="fragment">
 				développement logiciel<br/>
-				<small>- ce qui nous intéresse, détail à suivre...</small></li>
+				<small>- ce qui nous intéresse, détails à suivre...</small></li>
 		</ul>
 	</section>
 	<section class="">
@@ -66,16 +70,7 @@
 		
 	</section>
 	<section>
-		
-		<h3>Quelques malheureux exemples récents</h3>
-		<ul>
-			<li>Domino's Pizza (650 000 comptes client)</li>
-			<li>eBay</li>
-			<li>Adobe (152 millions de comptes)</li>
-			<li>Heartbleed</li>
-		</ul>
-	</section>
-	<section>
+
 		<h2>Les conséquences</h2>
 		<h4>de l'exploitation des vulnérabilités</h4>
 		<p>
@@ -84,14 +79,25 @@
 		<p>
 		<ul>
 			<li class="fragment">Une fuite de données<br/>
-				<small>- notamment personnelles comme les mots de passe, qui font régulièrement les choux gras de la presse spécialisée</small></li>
+				<small>- notamment personnelles comme les mots de passe, qui font régulièrement les choux gras de la presse spécialisée, mais aussi de plus en plus de la presse grand public, ce qui conduit directement à...</small></li>
 			<li class="fragment">Une atteinte à l'image<br/>
-				<small>- le défaçage (defacing), la reprise sur les réseaux sociaux de failles de sécurité, avérées ou non</small></li>
+				<small>- la reprise sur les réseaux sociaux de failles de sécurité, avérées ou non, le défaçage (defacement), le relai d'une fausse information... </small></li>
 			<li class="fragment">Une interruption de service<br/>
-				<small>- attaque ciblée par déni de service, blocage de comptes utilisateurs suite à attaque par <i>brute force</i> </small></li>
+				<small>- attaque ciblée par déni de service, blocage de comptes utilisateurs suite à attaque par <i>brute force</i>, qui entraine une coupure de service et donc une perte directe du chiffre d'affaire</small></li>
 		</ul>
 		</p>
 	</section>
+	<section>
+		<h3>Quelques malheureux exemples récents</h3>
+		<ul>
+			<li class="fragment"><strong>Domino's Pizza</strong> - <a href="http://www.lefigaro.fr/societes/2014/06/16/20005-20140616ARTFIG00262-en-plein-mondial-domino-s-pizza-se-fait-hacker-les-donnees-de-ses-clients.php">650 000 comptes client</a>, une demande publique de rançon à la clef, relayée dans toute la presse</li>
+			<li class="fragment"><strong>eBay</strong> - <a href="http://www.lefigaro.fr/secteur/high-tech/2014/05/21/01007-20140521ARTFIG00249-victime-d-une-cyberattaque-ebay-recommande-de-changer-de-mot-de-passe.php">145 millions de comptes</a>, tous les utilisateurs ont été invités à changer leur mot de passe, EBay Inc. <a href="http://www.capital.fr/bourse/actualites/apres-avoir-ete-pirate-ebay-recommande-de-changer-de-mot-de-passe-936429">perd 2,6% à l'ouverture de Wall Street></a> soit environ 166 M$ de capitalisation</li>
+			<li class="fragment"><strong>Adobe</strong> - <a href="http://www.itespresso.fr/adobe-pirates-inscrivent-nouveau-record-69755.html">152 millions de comptes</a></li>
+			<li class="fragment"><strong>Target</strong> - <a href="http://www.lemonde.fr/economie/article/2014/01/22/aux-etats-unis-piratage-geant-des-clients-de-target_4352310_3234.html">110 millions de clients, des données de carte de crédit</a></li>
+			<li class="fragment"><strong>Heartbleed</strong> - le bug de sécurité le plus important à ce jour, impacts impossibles à quantifier (potentiellement plus de 2 ans d'antécédent, <a href="http://heartbleed.com/">bug introduit fin 2011</a>), plusieurs millions de serveurs...</li>
+		</ul>
+	</section>
+	
     
 	<section>
 		<section>
@@ -99,8 +105,8 @@
 			Pour éviter les vulnérabilités, il faut tout d'abord les connaitre<br/>
 			Il existe des référentiel qui font l'unanimité :
 			<ul>
-				<li>Classification des vulnérabilités : Top 10 OWASP (version 2013)</li>
-				<li></li>
+				<li><a href="https://www.owasp.org">OWASP</a> : Classification des vulnérabilités - Top 10 OWASP</li>
+				<li>Web Application Security Consortium (<a href="http://www.webappsec.org/">WASC</a>) : <a href="http://projects.webappsec.org/w/page/13246978/Threat%20Classification">Classification des menaces et attaques</a></li>
 			</ul>
 			
 			
@@ -113,8 +119,8 @@
 				<li>produit et met à disposition toute sorte de ressources
 					<small><ul>
 						<li>une base documentaire riche et régulièrement mise à jour</li>
-						<li>des fiches synthétiques sur les principales failles de sécurité (top 10 <a href="http://owasptop10.googlecode.com/files/OWASP%20Top%2010%20-%202013.pdf">version 2013 en anglais</a> ou <a href="http://owasptop10.googlecode.com/files/OWASP%20Top%2010%20-%202010%20French.pdf">version 2010 en français</a>)</li>
-						<li>du code d'exemple, des framework (ex: <a href="https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API">ESAPI</a>) pour se prémunir des attaques</li>
+						<li>des fiches synthétiques sur les principales failles de sécurité (top 10 <a href="http://owasptop10.googlecode.com/files/OWASP%20Top%2010%20-%202013.pdf"> en anglais</a> ou <a href="https://code.google.com/p/owasptop10/downloads/detail?name=OWASP%20Top%2010%20-%202013%20-%20French.pdf&can=2&q=">en français</a>)</li>
+						<li>des exemples de code sécurisé, des framework pour se prémunir des attaques (ex: <a href="https://www.owasp.org/index.php/Category:OWASP_Enterprise_Security_API">ESAPI</a>)</li>
 						<li>des outils d'intrusion pour tester le degré de vulnérabilité de son système (ex: <a href="https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project">ZAP Proxy</a>)</li>
 						<li>...</li>
 					</ul></small>
@@ -125,18 +131,27 @@
 	<section>
 		<h3>Les bons réflexes</h3>
 		Les contrôles sur lesquels doit se concentrer tout développeur : <a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Main">OWASP Proactive Controls</a>
+		<p>Les 3 principales vulnérabilité à connaitre :
+		<ul>
+			<li><strong>Cross site Scripting (XSS)</strong> : injection sur le navigateur client, persistente ou on</li>
+			<li><strong>Injections</strong> : SQL Injection, Command Injection, LDAP Injection...</li>
+			<li><strong>Cross Site Request Forgery (CSRF)</strong> : manipulation de la session d'un utilisateur à l'insu de son plein gré</li>
+		</ul></p>
 	</section>
 	<section>
 		
 		<h3>All input is evil</h3>
+
 		<p>
 		S'il ne fallait retenir qu'une règle, c'est celle de ne jamais faire confiance aux sources externes, à commencer par les entrées utilisateur.<br/>
 		La bonne pratique consiste soit à :
 		</p>
+
 		<ul>
 			<li><b>filtrer</b> pour n'accepter que l'attendu (de préférence en liste blanche)</li>
 			<li><b>encoder</b> pour éviter toute injection (SQL injection, XSS, ...)</li>
 		</ul>
+
 		<p>Ne pas réinventer la roue, des framework de filtrage/encodage existent (<a href="https://code.google.com/p/owasp-esapi-php/wiki/Welcome?tm=6">ESAPI</a> par ex.)
 	</section>
 	<section>
@@ -145,10 +160,19 @@
 		<ul>
 			<li>Utiliser des framework dédiés à la sécurité (il est trop dangereux et coûteux de chercher à réinventer la roue)</li>
 			<li>Transférer et Stocker les données sensibles de manière sécurisée (securing data at rest / in transit)</li>
-			<li>Tracer (et si possible analyser...)</li>
+			<li>Tracer (et si possible analyser les traces...)</li>
 			<li>et bien d'autres...</li>
 		</ul>
 		<a href="https://wiki.collaboratif-courrier.fr/confluence/x/hQGAB">Page wiki : recommandation pour la sécurité des applications Web</a>
+
+	</section>
+	<section>
+		<h3>Pour résumer</h3>
+		<ul>
+			<li>Connaitre les vulnérabilités pour pouvoir s'en protéger, être curieux (référentiel <a href="#/5/1">OWASP</a>)</li>
+			<li>Avoir une position défensive sur toute donnée en entrée du système, particulièrement celle fournie par le navigateur (formulaire, paramètre d'URL, fichier...)</li>
+			<li>Utiliser des framework/bibliothèque sécurité, ne pas réinventer la roue</li>
+		</ul>
 	</section>
     </div>
 <!--
