@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Vulnérabilités Web</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -48,7 +48,7 @@
 			
 <div class="slides">
     <section class="">
-        <h2>Le développement sécurisé pour une application Web</h2>
+        <h2>Sensibiilisation aux vulnérabilités applicatives Web</h2>
     </section>
 	<section>
 		<h2>Les vulnérabilités</h1>
@@ -104,10 +104,12 @@
 			<h3>Know your enemy</h3>
 			<p>
 			Pour éviter les vulnérabilités, il faut tout d'abord les connaitre<br/>
-			Il existe des référentiel qui font l'unanimité :
+			Il existe des référentiels qui font l'unanimité :
 			</p>
 			<ul>
 				<li><a href="https://www.owasp.org">OWASP</a> : Classification des vulnérabilités - Top 10 OWASP</li>
+				<li>CWE : <a href="http://cwe.mitre.org/index.html">Common Weakness Enumeration</a> - Top 25 des erreurs de conception/développement</li>
+				<li>SANS : <a href="http://www.sans.org/critical-security-controls/">Critical Security Controls</a> - Top 20 des contrôles de sécurité</li>
 				<li>Web Application Security Consortium (<a href="http://www.webappsec.org/">WASC</a>) : <a href="http://projects.webappsec.org/w/page/13246978/Threat%20Classification">Classification des menaces et attaques</a></li>
 			</ul>
 			
@@ -132,14 +134,14 @@
 	</section>
 	<section>
 		<h3>Les bons réflexes</h3>
-		Les contrôles sur lesquels doit se concentrer tout développeur : <a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Main">OWASP Proactive Controls</a>
+		<p>Les contrôles sur lesquels doit se concentrer tout développeur : <a href="https://www.owasp.org/index.php/OWASP_Proactive_Controls#tab=Main">OWASP Proactive Controls</a></p>
 		<p>Les 3 principales vulnérabilité à connaitre :
 		<ul>
 			<li><strong>Cross site Scripting (XSS)</strong> : injection sur le navigateur client, persistente ou on</li>
 			<li><strong>Injections</strong> : SQL Injection, Command Injection, LDAP Injection...</li>
 			<li><strong>Cross Site Request Forgery (CSRF)</strong> : manipulation de la session d'un utilisateur à l'insu de son plein gré</li>
 		</ul></p>
-		<a href="http://dsic-securite.herokuapp.com/">Un mini-site sur ces 3 vulnérabilités</a>
+		<p><a href="http://dsic-securite.herokuapp.com/">Un mini-site sur ces 3 vulnérabilités</a></p>
 	</section>
 	<section>
 		
@@ -159,14 +161,13 @@
 	</section>
 	<section>
 		<h3>Recommandations pour les applications Web</h3>
-		<p>En plus du référentiel OWASP, des bonnes pratiques existent pour gérer la sécurité des applications Web</p>
+		<p>En plus ddes guides de l'OWASP, des bonnes pratiques existent pour gérer la sécurité des applications Web</p>
 		<ul>
-			<li>Utiliser des framework dédiés à la sécurité (il est trop dangereux et coûteux de chercher à réinventer la roue)</li>
-			<li>Transférer et Stocker les données sensibles de manière sécurisée (securing data at rest / in transit)</li>
-			<li>Tracer (et si possible analyser les traces...)</li>
-			<li>et bien d'autres... (cf. les guides de l'OWASP)</li>
+			<li>Utiliser des framework dédiés à la sécurité (il est trop dangereux et coûteux de chercher à réinventer la roue)<small>Exemple : <a href="http://projects.spring.io/spring-security/">Spring Security</a></small></li>
+			<li>Transférer et Stocker les données sensibles de manière sécurisée (securing data at rest / in transit)<small>Exemple : HTTP<strong>S</strong>, "stockage" des mots de passe selon un algorithme de hashage sécurisé (bcrypt, scrypt, ...)</small></li>
+			<li>Tracer (et si possible analyser les traces...)<small>Exemple : centraliser avec Syslog, Logstash, ...</small></li>			
 		</ul>
-		<a href="https://wiki.collaboratif-courrier.fr/confluence/x/hQGAB">Page wiki : recommandation pour la sécurité des applications Web</a>
+		<p><a href="https://wiki.collaboratif-courrier.fr/confluence/x/hQGAB">Page wiki : recommandation pour la sécurité des applications Web</a></p>
 
 	</section>
 	<section>
